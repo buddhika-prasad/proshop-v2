@@ -1,0 +1,41 @@
+{
+  "name": "proshop-v2",
+  "version": "1.0.0",
+  "description": "ecommerce application built with MERN",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buddhika-prasad/proshop.git"
+  },
+  "author": "Buddhika Prasad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buddhika-prasad/proshop/issues"
+  },
+  "homepage": "https://github.com/buddhika-prasad/proshop#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoos": "^0.0.1-security",
+    "mongoose": "^8.16.0",
+    "multer": "^2.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "dotenv": "^16.5.0",
+    "nodemon": "^3.1.10"
+  }
+}
